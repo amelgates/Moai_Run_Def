@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     //es el unico que existe para que unity lo reconozca 
     public int score = 0;
     public GameObject textDisplay;
-
+    public TextMeshProUGUI textMenu;
     public bool play;
     public GameObject data;
     private void Awake()
@@ -40,13 +40,18 @@ public class GameManager : MonoBehaviour
     {
         //score se esta concatena a una cadena que es un espacio vacio
         //la otra forma es score.ToString()
-        //textDisplay.GetComponent<TextMeshProUGUI>().text = score + "";
-        textDisplay.GetComponent<TextMeshProUGUI>().text = score.ToString();
+        textDisplay.GetComponent<TextMeshProUGUI>().text = score + "m";
+        //textDisplay.GetComponent<TextMeshProUGUI>().text = score.ToString();
         //concadenacion diferente de la suma
 
     }
     public void incrementScore()
     {
         score = score + 10;
+    }
+
+    public void gameOver()
+    {
+
     }
 }

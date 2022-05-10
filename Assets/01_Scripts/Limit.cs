@@ -19,6 +19,7 @@ public class Limit : MonoBehaviour
     {
         //OTHER ES EL OBJETO CON EL QUE COLISIONAS
         Destroy(other.gameObject);
+        
         //se destruye el objeto con el que colisionas
         print("hasta la proxima");
     }

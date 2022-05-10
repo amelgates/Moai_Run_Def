@@ -19,4 +19,7 @@ public class UiCrontrolller : MonoBehaviour
         dates.GetComponent<Data>().namePlayer = namePlayer;
         SceneManager.LoadScene("Play");
     }
+
+   
+
 }
