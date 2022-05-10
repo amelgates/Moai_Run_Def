@@ -84,7 +84,11 @@ void Update()
                 print("rueda");
             }
 
-
+            ///adadadadadadadad pero 20 veces cambie a velocidad 2
+            //cambia la animacion
+            ///adadad pero 60 vecs a velocidad 3 que es la maxima
+            // sipierdes
+            // adadad para mueresasa
             if (Input.GetKeyDown(KeyCode.D))
             {
                 animator.SetBool("FallRight", true);
