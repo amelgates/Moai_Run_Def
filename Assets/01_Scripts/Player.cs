@@ -81,7 +81,8 @@ void Update()
                 animator.SetBool("FallLeft", true);
                 animator.SetBool("FallRight", false);
                 inGaming = false;
-                print("rueda");
+                //print("rueda");
+                GameManager.Instance.gameOver();
             }
 
             ///adadadadadadadad pero 20 veces cambie a velocidad 2
@@ -93,10 +94,10 @@ void Update()
             {
                 animator.SetBool("FallRight", true);
                 animator.SetBool("FallLeft", false);
-                print("secae");
-
+                //print("secae");
+                GameManager.Instance.gameOver();
             }
-            
+           
         }
 
     }
