@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public GameObject textDisplay;
     public GameObject textMenu;
-    public bool play;
+    //play booleano para el game Over 
+    public bool play = false;
     public GameObject data;
     private void Awake()
     {
+        play = true;
         // Si existe una instancia, se destruye.
 
         if (Instance != null && Instance != this)
@@ -42,17 +44,25 @@ public class GameManager : MonoBehaviour
         //la otra forma es score.ToString()
         //textDisplay.GetComponent<TextMeshProUGUI>().text = score + "m";
         textDisplay.GetComponent<TextMeshProUGUI>().text = score.ToString();
-        //concadenacion diferente de la suma
+        //concadenacion es diferente de la suma
 
     }
     public void incrementScore()
     {
         score = score + 10;
     }
+    public void incrementGameSpeed(float speed)
+    {
+        Time.timeScale = speed;
+    }
 
     public void gameOver()
     {
+        play = false;
         textMenu.SetActive(true); //oculta o muestra un objeto, en este caso el mensaje
         Time.timeScale = 0.0f; //para controlar la velocidad del juego
     }
+    //se pone en los parentecis el parametro que va a recibir
+   
+
 }
