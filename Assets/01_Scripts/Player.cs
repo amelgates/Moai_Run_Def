@@ -17,13 +17,14 @@ public class Player : MonoBehaviour
     
 
     public Animator animator;
-    private float gameSpeed = 1.0f;
+    //private float gameSpeed = 1.0f;
 
     public char d { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
+        
         prevKeyPress = 'q';
          keyPres = 'x';
         animator = GetComponent<Animator>();
@@ -48,12 +49,14 @@ void Update()
         //con start volvemos a iniciar el tiempo
         if (Input.GetKeyDown(KeyCode.A))
         {
+            
             StopCoroutine("controllerTimePress");
             StartCoroutine("controllerTimePress");
             keyPres = 'a';
             animator.SetBool("IsMovRight", true);
             animator.SetBool("IsMovLeft", false);
-            
+            GameManager.Instance.isMoving();
+
             //print("a");
             if (keyPres == prevKeyPress)
             {
@@ -66,14 +69,17 @@ void Update()
                 prevKeyPress = keyPres;
                 countSpeed++;
             }
+            
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
+            
             StopCoroutine("controllerTimePress");
             StartCoroutine("controllerTimePress");
             keyPres = 'd';
             animator.SetBool("IsMovLeft", true);
             animator.SetBool("IsMovRight", false);
+            GameManager.Instance.isMoving();
             //print("d");
             if (keyPres == prevKeyPress)
             {
@@ -86,6 +92,7 @@ void Update()
                 prevKeyPress = keyPres;
                 countSpeed++;
             }
+            
         }
        
         if(countPress>2)
@@ -94,11 +101,12 @@ void Update()
             //Enumerator para terminar animaciones previas y darle play a la animacion de muerte
             if (Input.GetKeyDown(KeyCode.A))
             {
+
                 animator.SetBool("FallLeft", true);
-                animator.SetBool("FallRight", false);
+                
                 inGaming = false;
                 //print("rueda");
-                GameManager.Instance.gameOver();
+                StartCoroutine(waitGameOver());
             }
 
             ///adadadadadadadad pero 20 veces cambie a velocidad 2
@@ -110,13 +118,15 @@ void Update()
             if (Input.GetKeyDown(KeyCode.D))
             {
                 animator.SetBool("FallRight", true);
-                animator.SetBool("FallLeft", false);
+                
+                inGaming = false;
                 //print("secae");
-                GameManager.Instance.gameOver();
-            }
-           
-        }
+                StartCoroutine(waitGameOver());
 
+            }
+            
+        }
+        
     }
     public void changeSpeed()
     {
@@ -140,16 +150,29 @@ void Update()
         }
         else
         {
-            GameManager.Instance.gameOver();
+            //GameManager.Instance.gameOver();
+            StartCoroutine(waitGameOver());
         }
 
         print(countSpeed);
         
     }
-    IEnumerator controllerTimePress()
+    
+    IEnumerator controllerTimePress() //Detecta que el jugador no esta presionando nada y termina al juego
     {
-        yield return new WaitForSeconds(2);
+        GameManager.Instance.isNotMoving();
+        yield return new WaitForSeconds(5);
         GameManager.Instance.gameOver();
+    }
+    IEnumerator waitGameOver()
+    {
+        
+        yield return new WaitForSeconds(3);
+        GameManager.Instance.gameOver();
+
+
+
+
     }
 }
 

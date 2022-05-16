@@ -16,7 +16,17 @@ public class ObstController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        if(GameManager.Instance.moving)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
+        else if (!GameManager.Instance.moving)
+        {
+            
+            speed = 0f;
+        }
+
+        
 
     }
     private void OnTriggerEnter(Collider other)

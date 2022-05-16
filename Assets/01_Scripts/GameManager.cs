@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     //esto es un single
     //es el unico que existe para que unity lo reconozca 
     public int score = 0;
+    public bool moving;
     public GameObject textDisplay;
     public GameObject textMenu;
     //play booleano para el game Over 
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         play = true;
+        moving = false;
         // Si existe una instancia, se destruye.
 
         if (Instance != null && Instance != this)
@@ -56,6 +58,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = speed;
     }
 
+    public void isMoving()
+    {
+        moving = true;
+    }
+    public void isNotMoving()
+    {
+        moving = false;
+    }
     public void gameOver()
     {
         play = false;
@@ -63,6 +73,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.0f; //para controlar la velocidad del juego
     }
     //se pone en los parentecis el parametro que va a recibir
-   
 
+   
 }
