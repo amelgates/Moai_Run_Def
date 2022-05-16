@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //inGaming es  la boleana  que se utiliza para el animator en muerte
+    //inGaming es  la booleana  que se utiliza para el animator en muerte
     //keyPress almacena el valor de la letra presionada
-    //countPress cuenta las veces que es precionada la tecla
+    //countPress cuenta las veces que es presionada la tecla
     //prevkeyPress almacena el valor de la tecla presionada previamente
     public bool inGaming = true;
     public char keyPres;

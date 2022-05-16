@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Loby.unity
     guid: 7f0088200eebd0a4aade8a6d9076dfd8
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 0eb578c21b3cf5c4faed846fa005aed0
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: ee7a16a57c86c894d8d752ce7ff2de2e
   m_configObjects: {}
