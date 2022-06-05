@@ -8,6 +8,8 @@ TagManager:
   - Data
   - point
   - Point
+  - Floor
+  - BackFloor
   layers:
   - Default
   - TransparentFX

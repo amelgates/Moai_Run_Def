@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CreateLoopMap : MonoBehaviour
 {
+    public GameObject backFloor;
+    public GameObject floor;
+    public GameObject floorSpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +18,17 @@ public class CreateLoopMap : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if( other.CompareTag("Floor"))
+        {
+            floor.transform.position = floorSpawn.transform.position;
+        }
+        if (other.CompareTag("BackFloor"))
+        {
+            backFloor.transform.position = floorSpawn.transform.position;
+        }
+
     }
 }
