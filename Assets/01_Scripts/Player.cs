@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public int countPress = 0;
     public char prevKeyPress;
     public int countSpeed = 0;
+    public GameObject arrowBar;
    
     
 
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour
          keyPres = 'x';
         animator = GetComponent<Animator>();
         //se llama para que espere ni bien inicia el juego
-       // StartCoroutine("controllerTimePress"); //s
+        StartCoroutine("controllerTimePress"); 
 
     }
 
@@ -50,11 +51,12 @@ void Update()
         if (Input.GetKeyDown(KeyCode.A))
         {
             
-            //StopCoroutine("controllerTimePress"); //
-            //StartCoroutine("controllerTimePress");//
+            StopCoroutine("controllerTimePress"); 
+            StartCoroutine("controllerTimePress");
             keyPres = 'a';
             animator.SetBool("IsMovRight", true);
             animator.SetBool("IsMovLeft", false);
+            arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
             GameManager.Instance.isMoving();
 
             //print("a");
@@ -62,10 +64,13 @@ void Update()
             {
                 countPress++;
                 countSpeed = 0;
+                arrowBar.transform.position = new Vector3(-0.63f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                
                 //print(countPress);
             }
             else
             {
+                countPress = 0;
                 prevKeyPress = keyPres;
                 countSpeed++;
             }
@@ -74,27 +79,48 @@ void Update()
         if (Input.GetKeyDown(KeyCode.D))
         {
             
-           // StopCoroutine("controllerTimePress"); //descomentar
-            //StartCoroutine("controllerTimePress");//descomentar
+            arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+            StopCoroutine("controllerTimePress"); 
+            StartCoroutine("controllerTimePress");
             keyPres = 'd';
             animator.SetBool("IsMovLeft", true);
             animator.SetBool("IsMovRight", false);
+            
             GameManager.Instance.isMoving();
             //print("d");
             if (keyPres == prevKeyPress)
             {
                 countPress++;
                 countSpeed = 0;
+                arrowBar.transform.position = new Vector3(1.21f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 //print(countPress);
             }
             else
             {
+                countPress = 0;
                 prevKeyPress = keyPres;
                 countSpeed++;
             }
             
+        } 
+        if(countPress == 2)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+
+                animator.SetBool("MissStepL", true);
+                arrowBar.transform.position = new Vector3(-1.48f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+               
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+
+                animator.SetBool("MissStepR", true);
+                arrowBar.transform.position = new Vector3(2.08f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+               
+
+            }
         }
-       
         if(countPress>2)
         {
             //print("gameover");
@@ -103,7 +129,7 @@ void Update()
             {
 
                 animator.SetBool("FallLeft", true);
-                
+                arrowBar.transform.position = new Vector3(-1.48f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
                 //print("rueda");
                 StartCoroutine(waitGameOver());
@@ -118,7 +144,7 @@ void Update()
             if (Input.GetKeyDown(KeyCode.D))
             {
                 animator.SetBool("FallRight", true);
-                
+                arrowBar.transform.position = new Vector3(2.08f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
                 //print("secae");
                 StartCoroutine(waitGameOver());
