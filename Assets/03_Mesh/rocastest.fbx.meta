@@ -1,26 +1,8 @@
 fileFormatVersion: 2
-guid: 4b4d01bb3ba7dcc4a9fbd6973a142fe7
+guid: 721cb7b47f5d99b459e9445993209b14
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: -2677124554657045362
-    second: Moai| First Left Step
-  - first:
-      74: -5496564706944862762
-    second: 'Moai| Left Step '
-  - first:
-      74: -4402695650595407591
-    second: Moai|First Right Step
-  - first:
-      74: 1955262258396696529
-    second: Moai|Left Fall
-  - first:
-      74: 6748662461527034945
-    second: Moai|Right Fall
-  - first:
-      74: 6963704936873990150
-    second: 'Moai|Right Step '
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -69,7 +51,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    bakeAxisConversion: 0
+    bakeAxisConversion: 1
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4

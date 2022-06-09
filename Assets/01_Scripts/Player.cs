@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
          keyPres = 'x';
         animator = GetComponent<Animator>();
         //se llama para que espere ni bien inicia el juego
-       // StartCoroutine("controllerTimePress"); //s
+        StartCoroutine("controllerTimePress");
 
     }
 
@@ -50,8 +50,8 @@ void Update()
         if (Input.GetKeyDown(KeyCode.A))
         {
             
-            //StopCoroutine("controllerTimePress"); //
-            //StartCoroutine("controllerTimePress");//
+            StopCoroutine("controllerTimePress"); 
+            StartCoroutine("controllerTimePress");
             keyPres = 'a';
             animator.SetBool("IsMovRight", true);
             animator.SetBool("IsMovLeft", false);
@@ -74,8 +74,8 @@ void Update()
         if (Input.GetKeyDown(KeyCode.D))
         {
             
-           // StopCoroutine("controllerTimePress"); //descomentar
-            //StartCoroutine("controllerTimePress");//descomentar
+            StopCoroutine("controllerTimePress"); 
+            StartCoroutine("controllerTimePress");
             keyPres = 'd';
             animator.SetBool("IsMovLeft", true);
             animator.SetBool("IsMovRight", false);
