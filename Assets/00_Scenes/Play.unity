@@ -3549,8 +3549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e554b4333d60a494d89456a0c96ff898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obstacule1: {fileID: 2534445102895969590, guid: 1f28a5005980f2047b111ed96f4e891d, type: 3}
-  Obstacule2: {fileID: 2534445102895969590, guid: f4e48930c44dc1b41b0d164d7eb91f8e, type: 3}
+  Obstacule1: {fileID: 433459953728806182, guid: ece9d0afff49e7b4baef3d30d88df254, type: 3}
+  Obstacule2: {fileID: 2001305099162024728, guid: 0fdd239d81dcfc34a85daf87a4f87961, type: 3}
   Obstacule3: {fileID: 2534445102895969590, guid: 8db4edf6c9236f1499428c245e534357, type: 3}
 --- !u!4 &1747746317
 Transform:
