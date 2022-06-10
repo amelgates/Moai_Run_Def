@@ -1,26 +1,8 @@
 fileFormatVersion: 2
-guid: 369dafc14d7506d498100e26fc4b67ba
+guid: 00c16783e302cbe44a54724a766708da
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: -2677124554657045362
-    second: Moai| First Left Step
-  - first:
-      74: -5496564706944862762
-    second: 'Moai| Left Step '
-  - first:
-      74: -4402695650595407591
-    second: Moai|First Right Step
-  - first:
-      74: 1955262258396696529
-    second: Moai|Left Fall
-  - first:
-      74: 6748662461527034945
-    second: Moai|Right Fall
-  - first:
-      74: 6963704936873990150
-    second: 'Moai|Right Step '
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -42,11 +24,11 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
