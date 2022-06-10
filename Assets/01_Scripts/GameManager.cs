@@ -58,14 +58,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = speed;
     }
 
-    public void isMoving()
-    {
-        moving = true;
-    }
-    public void isNotMoving()
-    {
-        moving = false;
-    }
+    //public void isMoving()
+    //{
+    //    moving = true;
+    //}
+    //public void isNotMoving()
+    //{
+    //    Debug.Log("aca");
+    //    moving = false;
+    //}
     public void gameOver()
     {
         play = false;

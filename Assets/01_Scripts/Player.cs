@@ -14,8 +14,12 @@ public class Player : MonoBehaviour
     public char prevKeyPress;
     public int countSpeed = 0;
     public GameObject arrowBar;
-   
-    
+
+    Coroutine timePress;
+
+    float actionTimer;
+    [SerializeField] float losingTimer = 5f;
+    [SerializeField] float stoppingTimer = 0.3f;
 
     public Animator animator;
     //private float gameSpeed = 1.0f;
@@ -25,23 +29,38 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         prevKeyPress = 'q';
-         keyPres = 'x';
+        keyPres = 'x';
         animator = GetComponent<Animator>();
         //se llama para que espere ni bien inicia el juego
-        StartCoroutine("controllerTimePress"); 
+        //timePress = StartCoroutine("controllerTimePress");
 
     }
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
         if(inGaming)
         controller();
         changeSpeed();
+        noActionTimer();
 
     }
+
+    void noActionTimer() 
+    {
+        actionTimer += Time.deltaTime;
+        if (actionTimer > losingTimer) 
+        {
+            StartCoroutine(waitGameOver());
+        }
+        else if (actionTimer > stoppingTimer) 
+        {
+            GameManager.Instance.moving = false;
+        }
+    }
+
     public void controller()
     {
         //detenemos la corutina antes de que se termine su tiempo
@@ -50,14 +69,14 @@ void Update()
         //con start volvemos a iniciar el tiempo
         if (Input.GetKeyDown(KeyCode.A))
         {
-            
-            StopCoroutine("controllerTimePress"); 
-            StartCoroutine("controllerTimePress");
+            //StopCoroutine(timePress);
+            //timePress = StartCoroutine("controllerTimePress");
+            actionTimer = 0;
+            GameManager.Instance.moving = true;
             keyPres = 'a';
             animator.SetBool("IsMovRight", true);
             animator.SetBool("IsMovLeft", false);
             arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
-            GameManager.Instance.isMoving();
 
             //print("a");
             if (keyPres == prevKeyPress)
@@ -80,13 +99,14 @@ void Update()
         {
             
             arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
-            StopCoroutine("controllerTimePress"); 
-            StartCoroutine("controllerTimePress");
+            //StopCoroutine(timePress);
+            //timePress = StartCoroutine("controllerTimePress");
+            actionTimer = 0;
+            GameManager.Instance.moving = true;
             keyPres = 'd';
             animator.SetBool("IsMovLeft", true);
             animator.SetBool("IsMovRight", false);
             
-            GameManager.Instance.isMoving();
             //print("d");
             if (keyPres == prevKeyPress)
             {
@@ -131,6 +151,7 @@ void Update()
                 animator.SetBool("FallLeft", true);
                 arrowBar.transform.position = new Vector3(-1.48f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
+                //GameManager.Instance.isNotMoving();
                 //print("rueda");
                 StartCoroutine(waitGameOver());
             }
@@ -146,13 +167,13 @@ void Update()
                 animator.SetBool("FallRight", true);
                 arrowBar.transform.position = new Vector3(2.08f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
+                //GameManager.Instance.isNotMoving();
                 //print("secae");
                 StartCoroutine(waitGameOver());
 
             }
             
         }
-        
     }
     public void changeSpeed()
     {
@@ -180,28 +201,21 @@ void Update()
             StartCoroutine(waitGameOver());
         }
 
-        print(countSpeed);
+        //print(countSpeed);
         
     }
     
-    IEnumerator controllerTimePress() //Detecta que el jugador no esta presionando nada y termina al juego
-    {
-        GameManager.Instance.isNotMoving();
-        yield return new WaitForSeconds(5);
-        GameManager.Instance.gameOver();
-    }
+    //IEnumerator controllerTimePress() //Detecta que el jugador no esta presionando nada y termina al juego
+    //{
+    //    Debug.Log("iniciacorutina");
+    //    GameManager.Instance.isNotMoving();
+    //    //GameManager.Instance.moving = false;
+    //    yield return new WaitForSeconds(5);
+    //    GameManager.Instance.gameOver();
+    //}
     IEnumerator waitGameOver()
-    {
-        
+    {        
         yield return new WaitForSeconds(3);
         GameManager.Instance.gameOver();
-
     }
 }
-
-
-
-
-
-
-

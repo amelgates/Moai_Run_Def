@@ -16,7 +16,16 @@ public class ProvMovent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        if(GameManager.Instance.moving == true)
+        {
+           
+           transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
+        
+        else if (!GameManager.Instance.moving == true)
+        {
+            transform.Translate(Vector3.forward * 0.0f * Time.deltaTime);
+        }
 
     }
  }

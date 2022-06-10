@@ -11,11 +11,15 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(spawnObstaculeRoutine());
+       
+          StartCoroutine(spawnObstaculeRoutine());
+       
+        
+       
     }
     private void spawnObstacule()
     {
-        Vector3 randomPosition = new Vector3(Random.Range(transform.position.x - 5, transform.position.x + 5),transform.position.y, transform.position.z);
+        Vector3 randomPosition = new Vector3(Random.Range(transform.position.x - 10, transform.position.x + 10),transform.position.y, transform.position.z);
         int tipo = Random.Range(1, 4);
         //debe ser 4 porque el ultimo es excluyente solo se da con enteros si trabajas con floats ambos parametros son incluyentes
         //con enteros solo el segundo es exluyente
@@ -36,11 +40,27 @@ public class Spawner : MonoBehaviour
         }
     
     }
+
+    private void Update()
+    {
+        //if (GameManager.Instance.moving == true)
+        //{
+        //    StartCoroutine(spawnObstaculeRoutine());
+        //}
+        //else if (!GameManager.Instance.moving)
+        //{
+        //    StopCoroutine(spawnObstaculeRoutine());
+        //}
+        
+
+           
+        
+    }
     IEnumerator spawnObstaculeRoutine()
     {
         while (true)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(5);
             spawnObstacule();
 
         }
