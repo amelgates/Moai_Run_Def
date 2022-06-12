@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
     Coroutine timePress;
 
     float actionTimer;
-    [SerializeField] float losingTimer = 5f;
-    [SerializeField] float stoppingTimer = 0.3f;
+    [SerializeField] float losingTimer = 1.5f;
+    [SerializeField] float stoppingTimer = 0.8f;
 
     public Animator animator;
     //private float gameSpeed = 1.0f;
@@ -54,6 +54,8 @@ public class Player : MonoBehaviour
         if (actionTimer > losingTimer) 
         {
             StartCoroutine(waitGameOver());
+            animator.SetBool("FallLeft", true);
+            animator.SetBool("FallRight", true);
         }
         else if (actionTimer > stoppingTimer) 
         {
@@ -74,8 +76,11 @@ public class Player : MonoBehaviour
             actionTimer = 0;
             GameManager.Instance.moving = true;
             keyPres = 'a';
-            animator.SetBool("IsMovRight", true);
-            animator.SetBool("IsMovLeft", false);
+            animator.SetBool("IsMovLeft", true);
+            animator.SetBool("IsMovRight", false);
+            animator.SetBool("MissStepR", false);
+            animator.SetBool("MissStepR2", false);
+
             arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
 
             //print("a");
@@ -84,7 +89,7 @@ public class Player : MonoBehaviour
                 countPress++;
                 countSpeed = 0;
                 arrowBar.transform.position = new Vector3(-0.63f, arrowBar.transform.position.y, arrowBar.transform.position.z);
-                
+                animator.SetBool("MissStepL", true);
                 //print(countPress);
             }
             else
@@ -104,15 +109,19 @@ public class Player : MonoBehaviour
             actionTimer = 0;
             GameManager.Instance.moving = true;
             keyPres = 'd';
-            animator.SetBool("IsMovLeft", true);
-            animator.SetBool("IsMovRight", false);
-            
+            animator.SetBool("IsMovRight", true);
+            animator.SetBool("IsMovLeft", false);
+            animator.SetBool("MissStepL", false);
+            animator.SetBool("MissStepL2", false);
+
+
             //print("d");
             if (keyPres == prevKeyPress)
             {
                 countPress++;
                 countSpeed = 0;
                 arrowBar.transform.position = new Vector3(1.21f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                animator.SetBool("MissStepR", true);
                 //print(countPress);
             }
             else
@@ -128,14 +137,14 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.A))
             {
 
-                animator.SetBool("MissStepL", true);
+                animator.SetBool("MissStepL2", true);
                 arrowBar.transform.position = new Vector3(-1.48f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
 
-                animator.SetBool("MissStepR", true);
+                animator.SetBool("MissStepR2", true);
                 arrowBar.transform.position = new Vector3(2.08f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                
 
@@ -182,22 +191,28 @@ public class Player : MonoBehaviour
         {
             if (countSpeed < 20)
             {
-
+                Debug.Log("velocidad1");
+                stoppingTimer = 0.5f;
                 GameManager.Instance.incrementGameSpeed(1.0f);
             }
             if (countSpeed >= 20)
             {
+                Debug.Log("velocidad2");
+                stoppingTimer = 1.0f;
                 GameManager.Instance.incrementGameSpeed(3.0f);
             }
 
             if (countSpeed >= 60)
             {
-                GameManager.Instance.incrementGameSpeed(5.0f);
+                Debug.Log("velocidad3");
+                stoppingTimer = 2.0f;
+                GameManager.Instance.incrementGameSpeed(7.0f);
             }
         }
         else
         {
-            //GameManager.Instance.gameOver();
+            animator.SetBool("FallLeft", true);
+            animator.SetBool("FallRight", true);
             StartCoroutine(waitGameOver());
         }
 
