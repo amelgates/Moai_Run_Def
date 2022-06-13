@@ -37,5 +37,10 @@ public class ObstController : MonoBehaviour
             print("PUNTO + 1");
             GameManager.Instance.incrementScore();
         }
+        if (other.tag == "Player")
+        {
+            print("PUNTO + 1");
+            GameManager.Instance.incrementScore();
+        }
     }
 }

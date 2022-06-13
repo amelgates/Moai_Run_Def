@@ -233,4 +233,12 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(3);
         GameManager.Instance.gameOver();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        //OTHER ES EL OBJETO CON EL QUE COLISIONAS
+        Destroy(other.gameObject);
+
+        //se destruye el objeto con el que colisionas
+        print("hasta la proxima");
+    }
 }
