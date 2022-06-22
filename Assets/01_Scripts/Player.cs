@@ -65,12 +65,19 @@ public class Player : MonoBehaviour
 
     public void controller()
     {
+        print("sep"+countSpeed);
         //detenemos la corutina antes de que se termine su tiempo
         //la corutina es como si nunca hiciera la tarea o lo evitamos
         //en este caso es game over
         //con start volvemos a iniciar el tiempo
+        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            StartCoroutine(resetSpeed());
+        }
         if (Input.GetKeyDown(KeyCode.A))
         {
+            StopCoroutine(resetSpeed());
+
             //StopCoroutine(timePress);
             //timePress = StartCoroutine("controllerTimePress");
             actionTimer = 0;
@@ -87,7 +94,8 @@ public class Player : MonoBehaviour
             if (keyPres == prevKeyPress)
             {
                 countPress++;
-                countSpeed = 0;
+                //countPress = 0;
+                //countSpeed = 0;
                 arrowBar.transform.position = new Vector3(-0.63f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 animator.SetBool("MissStepL", true);
                 //print(countPress);
@@ -95,6 +103,8 @@ public class Player : MonoBehaviour
             else
             {
                 countPress = 0;
+                //countPress++;
+                
                 prevKeyPress = keyPres;
                 countSpeed++;
             }
@@ -102,7 +112,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            
+            StopCoroutine(resetSpeed());
             arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
             //StopCoroutine(timePress);
             //timePress = StartCoroutine("controllerTimePress");
@@ -119,7 +129,8 @@ public class Player : MonoBehaviour
             if (keyPres == prevKeyPress)
             {
                 countPress++;
-                countSpeed = 0;
+                //countPress = 0;
+                //countSpeed = 0;
                 arrowBar.transform.position = new Vector3(1.21f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 animator.SetBool("MissStepR", true);
                 //print(countPress);
@@ -127,11 +138,13 @@ public class Player : MonoBehaviour
             else
             {
                 countPress = 0;
+                //countPress++;
                 prevKeyPress = keyPres;
                 countSpeed++;
             }
             
         } 
+        //TE PUEDES CAER
         if(countPress == 2)
         {
             if (Input.GetKeyDown(KeyCode.A))
@@ -150,6 +163,7 @@ public class Player : MonoBehaviour
 
             }
         }
+        //PARA MORIR
         if(countPress>2)
         {
             //print("gameover");
@@ -161,7 +175,7 @@ public class Player : MonoBehaviour
                 arrowBar.transform.position = new Vector3(-1.48f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
                 //GameManager.Instance.isNotMoving();
-                //print("rueda");
+                print("rueda");
                 StartCoroutine(waitGameOver());
             }
 
@@ -177,7 +191,7 @@ public class Player : MonoBehaviour
                 arrowBar.transform.position = new Vector3(2.08f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
                 //GameManager.Instance.isNotMoving();
-                //print("secae");
+                print("secae");
                 StartCoroutine(waitGameOver());
 
             }
@@ -191,22 +205,22 @@ public class Player : MonoBehaviour
         {
             if (countSpeed < 20)
             {
-                Debug.Log("velocidad1");
+                print("velocidad1");
                 stoppingTimer = 0.5f;
-                GameManager.Instance.incrementGameSpeed(1.0f);
+                GameManager.Instance.incrementGameSpeed(2.0f);
             }
             if (countSpeed >= 20)
             {
-                Debug.Log("velocidad2");
+                print("velocidad2");
                 stoppingTimer = 1.0f;
-                GameManager.Instance.incrementGameSpeed(3.0f);
+                GameManager.Instance.incrementGameSpeed(4.0f);
             }
 
             if (countSpeed >= 60)
             {
-                Debug.Log("velocidad3");
+                print("velocidad3");
                 stoppingTimer = 2.0f;
-                GameManager.Instance.incrementGameSpeed(7.0f);
+                GameManager.Instance.incrementGameSpeed(6.0f);
             }
         }
         else
@@ -219,7 +233,7 @@ public class Player : MonoBehaviour
         //print(countSpeed);
         
     }
-    
+
     //IEnumerator controllerTimePress() //Detecta que el jugador no esta presionando nada y termina al juego
     //{
     //    Debug.Log("iniciacorutina");
@@ -228,6 +242,15 @@ public class Player : MonoBehaviour
     //    yield return new WaitForSeconds(5);
     //    GameManager.Instance.gameOver();
     //}
+    IEnumerator resetSpeed() //Detecta que el jugador no esta presionando nada y termina al juego
+    {
+        Debug.Log("iniciacorutina");
+     
+       
+        yield return new WaitForSeconds(2);
+        countSpeed = 0;
+        GameManager.Instance.incrementGameSpeed(2.0f);
+    }
     IEnumerator waitGameOver()
     {        
         yield return new WaitForSeconds(3);
