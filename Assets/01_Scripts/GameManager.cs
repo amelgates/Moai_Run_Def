@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     public GameObject textDisplay;
     public GameObject textMenu;
     public GameObject textWarning;
-    public float speedGame = 1.0f;
     //play booleano para el game Over 
     public bool play = false;
     public GameObject data;
@@ -65,8 +64,7 @@ public class GameManager : MonoBehaviour
     }
     public void incrementGameSpeed(float speed)
     {
-        speedGame = speed;
-        //Time.timeScale = speed;
+        Time.timeScale = speed;
     }
 
     //public void isMoving()
@@ -82,7 +80,7 @@ public class GameManager : MonoBehaviour
     {
         play = false;
         textMenu.SetActive(true); //oculta o muestra un objeto, en este caso el mensaje
-        //Time.timeScale = 0.0f; //para controlar la velocidad del juego
+        Time.timeScale = 0.0f; //para controlar la velocidad del juego
     }
     //se pone en los parentecis el parametro que va a recibir
 
