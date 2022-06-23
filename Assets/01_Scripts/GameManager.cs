@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public bool moving;
     public GameObject textDisplay;
     public GameObject textMenu;
-    public GameObject textWarning;
+    //public GameObject textWarning;
+    public GameObject imageGo;
     //play booleano para el game Over 
     public bool play = false;
     public GameObject data;
@@ -50,12 +51,14 @@ public class GameManager : MonoBehaviour
         //concadenacion es diferente de la suma
         if (moving == false)
         {
-            textWarning.SetActive(true);
-            textWarning.GetComponent<TextMeshProUGUI>().text = "Necesitas moverte";
+            imageGo.SetActive(true);
+            //textWarning.SetActive(true);
+            //textWarning.GetComponent<TextMeshProUGUI>().text = "Necesitas moverte";
         }
         if (moving == true)
         {
-            textWarning.SetActive(false);
+            imageGo.SetActive(false);
+            //textWarning.SetActive(false);
         }
     }
     public void incrementScore()
