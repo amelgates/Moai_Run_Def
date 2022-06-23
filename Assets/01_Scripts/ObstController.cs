@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstController : MonoBehaviour
 {
-   
+    public GameObject destroyParticles;
     private float speed = 5.0f;
 
     // Start is called before the first frame update
@@ -26,9 +26,6 @@ public class ObstController : MonoBehaviour
             
             speed = 0f;
         }
-
-        
-
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -40,6 +37,8 @@ public class ObstController : MonoBehaviour
         if (other.tag == "Player")
         {
             print("PUNTO + 1");
+            GameObject cloneParticles = Instantiate(destroyParticles, transform.position, Quaternion.identity);
+            Destroy(cloneParticles, 2.0f);
             GameManager.Instance.incrementScore();
         }
     }
