@@ -1,6 +1,9 @@
-//hacer textura al suelo
-//hacer que se mueva el mapa com, o si fuera un spawner
-//hacer que el juego deje de moverse cuando el jugador muera o deje de apretar botones.
+
+// sacar el timer y que el puntaje sea mas grande y este en un buen lugar
+// ver lo del audio
+//cambiar las fuentes
+//particulas al destruir
+//particulas de otro color para simular fuego
 //hacer que el moai tenga fuego en la velocidad 3 
-//hacer que los objetos cuando colisionen en el moai se derritan
-//hacer que los objetos retumben cuando el moai salte
+// ver si se puede hacer las skins
+
