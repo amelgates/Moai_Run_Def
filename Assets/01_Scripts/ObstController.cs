@@ -18,8 +18,8 @@ public class ObstController : MonoBehaviour
     {
         if(GameManager.Instance.moving)
         {
-            speed = 5.0f;
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            float gameSpeed = GameManager.Instance.speedGame;
+            transform.Translate(Vector3.forward * (speed*gameSpeed)* Time.deltaTime);
         }
         else if (!GameManager.Instance.moving)
         {

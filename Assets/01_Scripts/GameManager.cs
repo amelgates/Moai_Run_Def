@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     {
         play = false;
         textMenu.SetActive(true); //oculta o muestra un objeto, en este caso el mensaje
-        //Time.timeScale = 0.0f; //para controlar la velocidad del juego
+        Time.timeScale = 0.0f; //para controlar la velocidad del juego
     }
     //se pone en los parentecis el parametro que va a recibir
 
