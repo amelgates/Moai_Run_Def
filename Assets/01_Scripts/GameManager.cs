@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject textDisplay;
     public GameObject textMenu;
     public GameObject textWarning;
-    public float speedGame = 1.0f;
+    //public float speedGame = 1.0f;
     //play booleano para el game Over 
     public bool play = false;
     public GameObject data;
@@ -65,8 +65,8 @@ public class GameManager : MonoBehaviour
     }
     public void incrementGameSpeed(float speed)
     {
-        speedGame = speed;
-        //Time.timeScale = speed;
+        //speedGame = speed;
+        Time.timeScale = speed;
     }
 
     //public void isMoving()

@@ -16,11 +16,11 @@ public class ProvMovent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float gameSpeed = GameManager.Instance.speedGame;
+        //float gameSpeed = GameManager.Instance.speedGame;
         if(GameManager.Instance.moving == true)
         {
-           
-           transform.Translate(Vector3.forward * (speed *gameSpeed) * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed  * Time.deltaTime);
+            //transform.Translate(Vector3.forward * (speed *gameSpeed) * Time.deltaTime);//POR SI SIRVE
         }
         
         else if (!GameManager.Instance.moving == true)
