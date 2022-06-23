@@ -248,7 +248,7 @@ public class Player : MonoBehaviour
      
        
         yield return new WaitForSeconds(2);
-        countSpeed = 0;
+        //countSpeed = 0; //POSIBLE CONFLICTO
         GameManager.Instance.incrementGameSpeed(2.0f);
     }
     IEnumerator waitGameOver()
