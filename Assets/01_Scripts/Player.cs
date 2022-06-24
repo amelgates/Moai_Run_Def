@@ -14,15 +14,23 @@ public class Player : MonoBehaviour
     public char prevKeyPress;
     public int countSpeed = 0;
     public GameObject arrowBar;
+    public Animator animator;
+    public GameObject dust;
+    public GameObject fire;
 
-    Coroutine timePress;
+
+    private AudioSource font;
+
+ 
 
     float actionTimer;
     [SerializeField] float losingTimer = 1.5f;
     [SerializeField] float stoppingTimer = 0.8f;
 
-    public Animator animator;
+
     //private float gameSpeed = 1.0f;
+    //Coroutine timePress;
+
 
     public char d { get; private set; }
 
@@ -60,6 +68,8 @@ public class Player : MonoBehaviour
         else if (actionTimer > stoppingTimer) 
         {
             GameManager.Instance.moving = false;
+            dust.SetActive(false);
+            fire.SetActive(false);
         }
     }
 
@@ -81,14 +91,14 @@ public class Player : MonoBehaviour
             animator.SetBool("MissStepR", false);
             animator.SetBool("MissStepR2", false);
 
-            arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+            arrowBar.transform.position = new Vector3(0.12f, arrowBar.transform.position.y, arrowBar.transform.position.z);
 
             //print("a");
             if (keyPres == prevKeyPress)
             {
                 countPress++;
                 countSpeed = 0;
-                arrowBar.transform.position = new Vector3(-0.63f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                arrowBar.transform.position = new Vector3(-0.09f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 animator.SetBool("MissStepL", true);
                 //print(countPress);
             }
@@ -103,7 +113,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             
-            arrowBar.transform.position = new Vector3(0.26f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+            arrowBar.transform.position = new Vector3(0.12f, arrowBar.transform.position.y, arrowBar.transform.position.z);
             //StopCoroutine(timePress);
             //timePress = StartCoroutine("controllerTimePress");
             actionTimer = 0;
@@ -120,7 +130,7 @@ public class Player : MonoBehaviour
             {
                 countPress++;
                 countSpeed = 0;
-                arrowBar.transform.position = new Vector3(1.21f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                arrowBar.transform.position = new Vector3(0.33f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 animator.SetBool("MissStepR", true);
                 //print(countPress);
             }
@@ -138,14 +148,14 @@ public class Player : MonoBehaviour
             {
 
                 animator.SetBool("MissStepL2", true);
-                arrowBar.transform.position = new Vector3(-1.48f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                arrowBar.transform.position = new Vector3(-0.272f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
 
                 animator.SetBool("MissStepR2", true);
-                arrowBar.transform.position = new Vector3(2.08f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                arrowBar.transform.position = new Vector3(0.548f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                
 
             }
@@ -158,7 +168,7 @@ public class Player : MonoBehaviour
             {
 
                 animator.SetBool("FallLeft", true);
-                arrowBar.transform.position = new Vector3(-1.48f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                arrowBar.transform.position = new Vector3(-0.272f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
                 //GameManager.Instance.isNotMoving();
                 //print("rueda");
@@ -174,7 +184,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.D))
             {
                 animator.SetBool("FallRight", true);
-                arrowBar.transform.position = new Vector3(2.08f, arrowBar.transform.position.y, arrowBar.transform.position.z);
+                arrowBar.transform.position = new Vector3(0.548f, arrowBar.transform.position.y, arrowBar.transform.position.z);
                 inGaming = false;
                 //GameManager.Instance.isNotMoving();
                 //print("secae");
@@ -191,12 +201,19 @@ public class Player : MonoBehaviour
         {
             if (countSpeed < 20)
             {
+                dust.SetActive(false);
+                fire.SetActive(false);
+                font = GetComponent<AudioSource>();
+                font.pitch = 1.0f;
                 Debug.Log("velocidad1");
                 stoppingTimer = 0.5f;
                 GameManager.Instance.incrementGameSpeed(1.0f);
             }
             if (countSpeed >= 20)
             {
+                dust.SetActive(true);
+                font = GetComponent<AudioSource>();
+                font.pitch = 1.2f;
                 Debug.Log("velocidad2");
                 stoppingTimer = 1.0f;
                 GameManager.Instance.incrementGameSpeed(3.0f);
@@ -204,6 +221,10 @@ public class Player : MonoBehaviour
 
             if (countSpeed >= 60)
             {
+                dust.SetActive(false);
+                fire.SetActive(true);
+                font = GetComponent<AudioSource>();
+                font.pitch = 1.4f;
                 Debug.Log("velocidad3");
                 stoppingTimer = 2.0f;
                 GameManager.Instance.incrementGameSpeed(7.0f);
@@ -232,6 +253,8 @@ public class Player : MonoBehaviour
     {        
         yield return new WaitForSeconds(3);
         GameManager.Instance.gameOver();
+        dust.SetActive(false);
+        fire.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {

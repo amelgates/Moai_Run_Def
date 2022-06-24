@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -273,8 +273,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4282245877
+  m_fontColor: {r: 0.9607844, g: 0.8862746, b: 0.2392157, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1094,16 +1094,16 @@ RectTransform:
   m_GameObject: {fileID: 748594432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.43022296, y: 0.5634282, z: 1}
+  m_LocalScale: {x: 0.28621268, y: 0.3748296, z: 0.6652659}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 26661123}
   m_Father: {fileID: 1558511529}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.48374748, y: -11}
+  m_AnchoredPosition: {x: 0.321823, y: -4.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &748594434
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.42352945, g: 0.2627451, b: 0.019607844, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1287,8 +1287,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4282245877
+  m_fontColor: {r: 0.9622642, g: 0.8853207, b: 0.24056605, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2460,7 +2460,7 @@ RectTransform:
   m_GameObject: {fileID: 1236798160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4317, y: 2.4317, z: 2.4317}
+  m_LocalScale: {x: 3.9959865, y: 3.9959865, z: 3.9959865}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 487789478}
@@ -2468,7 +2468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47, y: 408}
+  m_AnchoredPosition: {x: 86, y: 390}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236798162
@@ -2500,8 +2500,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282245877
+  m_fontColor: {r: 0.9607844, g: 0.8862746, b: 0.2392157, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2693,6 +2693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541052b27633fab40bc82476efc329a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyParticles: {fileID: 0}
+  dustParticles: {fileID: 0}
 --- !u!65 &1320641727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3312,19 +3314,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558511528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3994, y: 2.9088, z: 1}
+  m_LocalScale: {x: 8.202929, y: 7.0190845, z: 2.4130518}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2052227476}
   - {fileID: 748594433}
+  - {fileID: 2052227476}
   m_Father: {fileID: 487789478}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -176}
+  m_AnchoredPosition: {x: -0, y: -271}
   m_SizeDelta: {x: 76.3683, y: 55.714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558511530
@@ -3340,15 +3342,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 7a6b47ccd8c80b34b938c5cd9c7dcd84, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3572,6 +3574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541052b27633fab40bc82476efc329a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyParticles: {fileID: 0}
+  dustParticles: {fileID: 0}
 --- !u!65 &1760518657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3810,16 +3814,16 @@ RectTransform:
   m_GameObject: {fileID: 2052227475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.43022296, y: 0.5634282, z: 1}
+  m_LocalScale: {x: 0.28621268, y: 0.3748296, z: 0.6652659}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 761946010}
   m_Father: {fileID: 1558511529}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.48374748, y: 10.7}
+  m_AnchoredPosition: {x: 0.321823, y: 14.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2052227477
@@ -3911,7 +3915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.40784317, g: 0.2509804, b: 0.019607844, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4045,6 +4049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541052b27633fab40bc82476efc329a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyParticles: {fileID: 0}
+  dustParticles: {fileID: 0}
 --- !u!65 &2079705697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4119,9 +4125,11 @@ MonoBehaviour:
   prevKeyPress: 0
   countSpeed: 0
   arrowBar: {fileID: 0}
+  animator: {fileID: 0}
+  dust: {fileID: 0}
+  fire: {fileID: 0}
   losingTimer: 5
   stoppingTimer: 0.3
-  animator: {fileID: 0}
 --- !u!95 &2136247901
 Animator:
   serializedVersion: 4
