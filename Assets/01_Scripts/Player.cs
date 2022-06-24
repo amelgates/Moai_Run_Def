@@ -13,19 +13,22 @@ public class Player : MonoBehaviour
     public int countPress = 0;
     public char prevKeyPress;
     public int countSpeed = 0;
+    public AudioClip normalSong;
+    public AudioClip speedSong1;
+    public AudioClip speedSong2;
     public GameObject arrowBar;
-
-    Coroutine timePress;
+    public Animator animator;
 
     float actionTimer;
     [SerializeField] float losingTimer = 1.5f;
     [SerializeField] float stoppingTimer = 0.8f;
 
-    public Animator animator;
+    private AudioSource font;
+
+
+    //Coroutine timePress;
     //private float gameSpeed = 1.0f;
-
-    public char d { get; private set; }
-
+    // public char d { get; private set; }
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +38,6 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         //se llama para que espere ni bien inicia el juego
         //timePress = StartCoroutine("controllerTimePress");
-
     }
 
     // Update is called once per frame
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour
         controller();
         changeSpeed();
         noActionTimer();
-
+        //font = GetComponent<AudioSource>();
     }
 
     void noActionTimer() 
@@ -191,22 +193,43 @@ public class Player : MonoBehaviour
         {
             if (countSpeed < 20)
             {
+                font = GetComponent<AudioSource>();
+                font.clip = normalSong;
+                font.Play();
                 Debug.Log("velocidad1");
                 stoppingTimer = 0.5f;
                 GameManager.Instance.incrementGameSpeed(1.0f);
+                font.Stop();
+
             }
             if (countSpeed >= 20)
             {
+                font.Pause();
+                ////font = GetComponent<AudioSource>();
+                //font.clip = normalSong;
+                //font.Stop(normalSong);
+                font = GetComponent<AudioSource>();
+                font.clip = speedSong1;
+                font.Play();
+                //font.Stop();
+
                 Debug.Log("velocidad2");
                 stoppingTimer = 1.0f;
                 GameManager.Instance.incrementGameSpeed(3.0f);
+                //font.Stop();
             }
 
             if (countSpeed >= 60)
             {
+                //font.Pause();
+                font = GetComponent<AudioSource>();
+                font.clip = speedSong2;
+                font.Play();
+                
                 Debug.Log("velocidad3");
                 stoppingTimer = 2.0f;
                 GameManager.Instance.incrementGameSpeed(7.0f);
+                //font.Stop();
             }
         }
         else
