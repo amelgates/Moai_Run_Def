@@ -13,9 +13,9 @@ public class Player : MonoBehaviour
     public int countPress = 0;
     public char prevKeyPress;
     public int countSpeed = 0;
-    public AudioClip normalSong;
-    public AudioClip speedSong1;
-    public AudioClip speedSong2;
+    //public AudioClip normalSong;
+    //public AudioClip speedSong1;
+    //public AudioClip speedSong2;
     public GameObject arrowBar;
     public Animator animator;
 
@@ -194,23 +194,24 @@ public class Player : MonoBehaviour
             if (countSpeed < 20)
             {
                 font = GetComponent<AudioSource>();
-                font.clip = normalSong;
-                font.Play();
+                font.pitch = 1.0f;
+                //font.clip = normalSong;
+          
                 Debug.Log("velocidad1");
                 stoppingTimer = 0.5f;
                 GameManager.Instance.incrementGameSpeed(1.0f);
-                font.Stop();
+                //font.Stop();
 
             }
             if (countSpeed >= 20)
             {
-                font.Pause();
+                //font.Pause();
                 ////font = GetComponent<AudioSource>();
                 //font.clip = normalSong;
                 //font.Stop(normalSong);
                 font = GetComponent<AudioSource>();
-                font.clip = speedSong1;
-                font.Play();
+                font.pitch = 1.2f;
+
                 //font.Stop();
 
                 Debug.Log("velocidad2");
@@ -223,9 +224,8 @@ public class Player : MonoBehaviour
             {
                 //font.Pause();
                 font = GetComponent<AudioSource>();
-                font.clip = speedSong2;
-                font.Play();
-                
+                font.pitch = 1.4f;
+
                 Debug.Log("velocidad3");
                 stoppingTimer = 2.0f;
                 GameManager.Instance.incrementGameSpeed(7.0f);
