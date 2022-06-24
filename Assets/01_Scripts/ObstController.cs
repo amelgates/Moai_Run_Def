@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObstController : MonoBehaviour
 {
     public GameObject destroyParticles;
+    public GameObject dustParticles;
+
     private float speed = 5.0f;
 
     // Start is called before the first frame update
@@ -37,8 +39,10 @@ public class ObstController : MonoBehaviour
         if (other.tag == "Player")
         {
             print("PUNTO + 1");
+            GameObject dustClouds = Instantiate(dustParticles, transform.position, Quaternion.identity);
+            Destroy(dustClouds, 2.0f);
             GameObject cloneParticles = Instantiate(destroyParticles, transform.position, Quaternion.identity);
-            Destroy(cloneParticles, 2.0f);
+            //Destroy(cloneParticles, 2.0f);
             GameManager.Instance.incrementScore();
         }
     }
