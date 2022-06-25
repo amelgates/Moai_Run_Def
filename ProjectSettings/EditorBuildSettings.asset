@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/Play.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/00_Scenes/WalterWhite.unity
+    guid: 216f6e74207a0a143a22b97e6b4e585c
+  - enabled: 1
+    path: Assets/00_Scenes/TheRock.unity
+    guid: 1b79d5c6c0f387c469bb0ae52a06fd59
+  - enabled: 1
+    path: Assets/00_Scenes/MoaiChan.unity
+    guid: ec3ba04dd45bbd24887d914f7d7033e1
+  - enabled: 1
+    path: Assets/00_Scenes/SelectMoai.unity
+    guid: 3ffaddd67d88bdc4db1df45f35cb7c7e
   m_configObjects: {}
