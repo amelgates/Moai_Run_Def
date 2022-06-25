@@ -270,8 +270,8 @@ Transform:
   m_GameObject: {fileID: 236412122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.3268, y: 0.3214, z: 106}
-  m_LocalScale: {x: 25.125618, y: 25.31201, z: 0.99116}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 28.949738, y: 29.164497, z: 1.1420145}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -808,6 +808,22 @@ PrefabInstance:
     - target: {fileID: 4696395086450448202, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -98.407
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090838959763846552, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090838959763846563, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090838959763846566, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090838959763846567, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5361292219602210288, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_Name
@@ -1865,6 +1881,22 @@ PrefabInstance:
     - target: {fileID: 4967998736085370112, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_Name
       value: MISSMOAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201808575098749402, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201808575098749403, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201808575098749409, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201808575098749413, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5744957240172158906, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_RootOrder
