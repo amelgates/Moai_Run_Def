@@ -490,7 +490,6 @@ GameObject:
   - component: {fileID: 534507021}
   - component: {fileID: 534507020}
   - component: {fileID: 534507019}
-  - component: {fileID: 534507022}
   m_Layer: 5
   m_Name: MoaiChan
   m_TagString: Untagged
@@ -507,7 +506,7 @@ RectTransform:
   m_GameObject: {fileID: 534507017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1996141711}
@@ -516,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106, y: -200}
+  m_AnchoredPosition: {x: 50, y: -200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534507019
@@ -538,7 +537,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -565,7 +564,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 472825033}
         m_TargetAssemblyTypeName: SelectMoai, Assembly-CSharp
-        m_MethodName: MoaiChanScene
+        m_MethodName: MoaiChan
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -588,7 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3921569, g: 0.2392157, b: 0.019607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -613,26 +612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534507017}
   m_CullTransparentMesh: 1
---- !u!95 &534507022
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534507017}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 232f45803304ad74486f8bdec8ae756e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &585568644
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +624,6 @@ GameObject:
   - component: {fileID: 585568648}
   - component: {fileID: 585568647}
   - component: {fileID: 585568646}
-  - component: {fileID: 585568649}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -662,7 +640,7 @@ RectTransform:
   m_GameObject: {fileID: 585568644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4066, y: 1.4066, z: 1.4066}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1644957803}
@@ -671,7 +649,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -411, y: -200}
+  m_AnchoredPosition: {x: -429, y: -200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585568646
@@ -693,7 +671,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -720,7 +698,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 472825033}
         m_TargetAssemblyTypeName: SelectMoai, Assembly-CSharp
-        m_MethodName: MoaiScene
+        m_MethodName: Moai
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -743,7 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3921569, g: 0.2392157, b: 0.019607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -768,26 +746,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585568644}
   m_CullTransparentMesh: 1
---- !u!95 &585568649
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585568644}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 232f45803304ad74486f8bdec8ae756e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &907582611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,7 +771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696395086450448202, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49
+      value: 42.07
       objectReference: {fileID: 0}
     - target: {fileID: 4696395086450448202, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -821,7 +779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696395086450448202, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59
+      value: 61.2
       objectReference: {fileID: 0}
     - target: {fileID: 4696395086450448202, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -855,19 +813,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
     - target: {fileID: 5090838959763846563, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
->>>>>>> 0d4e1952c228092de16e8d94ca2d442bdbbf76f2
->>>>>>> Stashed changes
     - target: {fileID: 5090838959763846566, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1042,7 +991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdf55a509b2014d4c83bb6f90b865f64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.5
+      value: -27.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdf55a509b2014d4c83bb6f90b865f64, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1050,7 +999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdf55a509b2014d4c83bb6f90b865f64, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59
+      value: 58.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdf55a509b2014d4c83bb6f90b865f64, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1098,7 +1047,6 @@ GameObject:
   - component: {fileID: 1106350626}
   - component: {fileID: 1106350625}
   - component: {fileID: 1106350624}
-  - component: {fileID: 1106350627}
   m_Layer: 5
   m_Name: TheRock
   m_TagString: Untagged
@@ -1115,7 +1063,7 @@ RectTransform:
   m_GameObject: {fileID: 1106350622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1366758835}
@@ -1124,7 +1072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153, y: -200}
+  m_AnchoredPosition: {x: -199, y: -200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106350624
@@ -1146,7 +1094,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1173,7 +1121,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 472825033}
         m_TargetAssemblyTypeName: SelectMoai, Assembly-CSharp
-        m_MethodName: TheRockScene
+        m_MethodName: TheRock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1196,7 +1144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3921569, g: 0.2392157, b: 0.019607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1221,26 +1169,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106350622}
   m_CullTransparentMesh: 1
---- !u!95 &1106350627
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106350622}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 232f45803304ad74486f8bdec8ae756e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1116357513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1181,6 @@ GameObject:
   - component: {fileID: 1116357517}
   - component: {fileID: 1116357516}
   - component: {fileID: 1116357515}
-  - component: {fileID: 1116357518}
   m_Layer: 5
   m_Name: WalterWhite
   m_TagString: Untagged
@@ -1270,7 +1197,7 @@ RectTransform:
   m_GameObject: {fileID: 1116357513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1278237259}
@@ -1279,7 +1206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 367, y: -200}
+  m_AnchoredPosition: {x: 314, y: -200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116357515
@@ -1301,7 +1228,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1328,7 +1255,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 472825033}
         m_TargetAssemblyTypeName: SelectMoai, Assembly-CSharp
-        m_MethodName: WalterWhiteScene
+        m_MethodName: WalterWhite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1351,7 +1278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3921569, g: 0.2392157, b: 0.019607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1376,26 +1303,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116357513}
   m_CullTransparentMesh: 1
---- !u!95 &1116357518
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116357513}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 232f45803304ad74486f8bdec8ae756e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1155330207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,15 +1459,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
-  m_sharedMaterial: {fileID: -7624454120618859934, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282245877
-  m_fontColor: {r: 0.9607844, g: 0.8862746, b: 0.2392157, a: 1}
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1577,8 +1484,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1687,15 +1594,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Rock \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
-  m_sharedMaterial: {fileID: -7624454120618859934, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282245877
-  m_fontColor: {r: 0.9607844, g: 0.8862746, b: 0.2392157, a: 1}
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1712,8 +1619,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1822,15 +1729,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Moai
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
-  m_sharedMaterial: {fileID: -7624454120618859934, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282245877
-  m_fontColor: {r: 0.9607844, g: 0.8862746, b: 0.2392157, a: 1}
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1847,8 +1754,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1987,19 +1894,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
     - target: {fileID: 5201808575098749413, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
->>>>>>> 0d4e1952c228092de16e8d94ca2d442bdbbf76f2
->>>>>>> Stashed changes
     - target: {fileID: 5744957240172158906, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2018,7 +1916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5744957240172158906, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.2
+      value: 5.624385
       objectReference: {fileID: 0}
     - target: {fileID: 5744957240172158906, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2026,7 +1924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5744957240172158906, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 43
+      value: 50.434963
       objectReference: {fileID: 0}
     - target: {fileID: 5744957240172158906, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2118,15 +2016,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Miss. Moai
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
-  m_sharedMaterial: {fileID: -7624454120618859934, guid: fd425367ed7b4894d996b3476492cafe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282245877
-  m_fontColor: {r: 0.9607844, g: 0.8862746, b: 0.2392157, a: 1}
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2143,8 +2041,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
