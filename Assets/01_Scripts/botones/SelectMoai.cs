@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SelectMoai : MonoBehaviour
 {
-    public void Moai()
+    public void MoaiScene()
     {
         SceneManager.LoadScene("Play");
     }
-    public void TheRock()
+    public void TheRockScene()
     {
         SceneManager.LoadScene("TheRock");
     }
-    public void MoaiChan()
+    public void MoaiChanScene()
     {
         SceneManager.LoadScene("MoaiChan");
     }
-    public void WalterWhite()
+    public void WalterWhiteScene()
     {
         SceneManager.LoadScene("WalterWhite");
     }
