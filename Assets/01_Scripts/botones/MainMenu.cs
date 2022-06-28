@@ -14,8 +14,15 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("SelectMoai");
-     }
+    }
+    public void HowPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
+    public void CreditsGame()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 
-        
 
 }
