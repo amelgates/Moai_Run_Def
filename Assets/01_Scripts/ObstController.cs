@@ -14,7 +14,8 @@ public class ObstController : MonoBehaviour
     void Start()
     {
         font = GetComponent<AudioSource>();
-        font.volume = 0.0f;
+        
+        
     }
 
     // Update is called once per frame
@@ -37,17 +38,16 @@ public class ObstController : MonoBehaviour
         {
             print("PUNTO + 1");
             GameManager.Instance.incrementScore();
-            font = GetComponent<AudioSource>();
-            font.volume = 0.0f;
+           
+            
         }
         if (other.tag == "Player")
         {
-            font = GetComponent<AudioSource>();
-            font.volume = 1.0f;
+            GameManager.Instance.DestroyRock();
             print("PUNTO + 1");
             GameObject dustClouds = Instantiate(dustParticles, transform.position, Quaternion.identity);
             Destroy(dustClouds, 2.0f);
-
+            
             GameObject cloneParticles = Instantiate(destroyParticles, transform.position, Quaternion.identity);
             //Destroy(cloneParticles, 2.0f);
             GameManager.Instance.incrementScore();

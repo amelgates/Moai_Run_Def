@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour
     //play booleano para el game Over 
     public bool play = false;
     public GameObject data;
+    private AudioSource source;
     private void Awake()
     {
+        source = GetComponent<AudioSource>();
         play = true;
         moving = false;
         // Si existe una instancia, se destruye.
@@ -86,6 +88,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.0f; //para controlar la velocidad del juego
     }
     //se pone en los parentecis el parametro que va a recibir
+    public void DestroyRock()
+    {
+        source.PlayOneShot(source.clip);
+    }
 
    
 }
