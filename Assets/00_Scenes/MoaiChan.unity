@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19918,15 +19918,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b9383116b42d77d4f8a5e2f42451f358, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.545
+  m_Volume: 0.127
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 147
+  Priority: 206
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -31679,7 +31679,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 47e3619c31f375b4a95e2b84537beda5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -38420,6 +38420,10 @@ PrefabInstance:
       propertyPath: arrowBar
       value: 
       objectReference: {fileID: 1905194337}
+    - target: {fileID: 5201808575098749409, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
+      propertyPath: m_Volume
+      value: 0.304
+      objectReference: {fileID: 0}
     - target: {fileID: 5744957240172158906, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -38464,6 +38468,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.422
       objectReference: {fileID: 0}
+    - target: {fileID: 6913338751554610389, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7600b33095363b6478123e0d72de069c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5216f7ff04753b942b87c946d253fabe, type: 3}
 --- !u!1001 &6985505226386769343
