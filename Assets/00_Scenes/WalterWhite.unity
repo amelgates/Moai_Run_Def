@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19922,7 +19922,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.122
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -38370,6 +38370,10 @@ PrefabInstance:
     - target: {fileID: 4696395086450448202, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.188
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090838959763846566, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5090838959763846566, guid: e3e51047539549743b1a36d4f324d0bc, type: 3}
       propertyPath: Priority
